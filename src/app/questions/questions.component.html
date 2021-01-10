@@ -1,0 +1,23 @@
+<div class="ques">
+<mat-card class="question-card" >
+    <mat-card-header >
+      <mat-card-subtitle>{{questions[qNo].qno}}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <p>
+       {{questions[qNo].question}}
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary"  (click)="answer('a')"  style="margin-left:8px;min-width: 400px;text-align:left">{{questions[qNo].option1}}</button> <span *ngIf="op1 && questions[qNo].answer=='a'" class="material-icons" style="color: green;"> check </span><span *ngIf="op1 && questions[qNo].answer!='a'" class="material-icons" style="color: red;"> cancel </span><br><br><br>
+      
+      <button mat-raised-button color="primary" (click)="answer('b')" style="min-width: 400px;text-align:left">{{questions[qNo].option2}}</button> <span *ngIf="op2 && questions[qNo].answer=='b'" class="material-icons" style="color: green;"> check </span><span *ngIf="op2 && questions[qNo].answer!='b'" class="material-icons" style="color: red;"> cancel </span><br><br><br>
+      
+      <button mat-raised-button color="primary" (click)="answer('c')" style="min-width: 400px;text-align:left">{{questions[qNo].option3}}</button> <span *ngIf="op3 && questions[qNo].answer=='c'" class="material-icons" style="color: green;"> check </span><span *ngIf="op3 && questions[qNo].answer!='c'" class="material-icons" style="color: red;"> cancel </span><br><br>
+      <button mat-raised-button color="primary"  (click)="answer('d')" style="min-width: 400px;text-align:left">{{questions[qNo].option4}}</button> <span *ngIf="op4 && questions[qNo].answer=='d'" class="material-icons" style="color: green;"> check </span><span *ngIf="op4 && questions[qNo].answer!='d'" class="material-icons" style="color: red;"> cancel </span><br><br>
+      <br><br><br>
+      <button mat-raised-button color="primary" (click)="previous()">Previous</button><button mat-raised-button color="primary" style="margin-left: 490px;" (click)="next()">Next</button>
+    </mat-card-actions>
+  </mat-card>
+  <br>
+</div> 

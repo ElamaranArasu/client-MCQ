@@ -1,0 +1,12 @@
+  
+<mat-card>
+  <mat-card-content class="login">
+    <form [formGroup]="login" (ngSubmit)="onSubmit()">
+        <input  type="text" name="userName" formControlName="userName" placeholder="User Name"><br><br>
+        <span *ngIf='userName.invalid && userName.touched' class="mat-error">username invalid</span><br><br>
+        <input   type="password" name="password" formControlName="password" placeholder="password"><br><br>
+        <span *ngIf='password.invalid && password.touched' class="mat-error">username invalid</span><br><br>
+        <button mat-raised-button color="primary" type="submit">Login</button>
+    </form>
+  </mat-card-content>
+</mat-card>

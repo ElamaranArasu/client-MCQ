@@ -1,0 +1,14 @@
+ 
+<mat-card>
+    <mat-card-content class="signup">
+      <form [formGroup]="signup" (ngSubmit)="onsignin()">
+        <input  type="text" name="mail" formControlName="mail" placeholder="mail"><br><br>
+          <span *ngIf='mail.invalid && mail.touched' class="mat-error">Mail Id invalid</span><br><br>
+          <input  type="text" name="name" formControlName="name" placeholder="User Name"><br><br>
+          <span *ngIf='name.invalid && name.touched' class="mat-error">username invalid</span><br><br>
+          <input   type="password" name="password" formControlName="password" placeholder="password"><br><br>
+          <span *ngIf='password.invalid && password.touched' class="mat-error">username invalid</span><br><br>
+          <button mat-raised-button color="primary" type="submit">Sign in</button>
+      </form>
+    </mat-card-content>
+  </mat-card>

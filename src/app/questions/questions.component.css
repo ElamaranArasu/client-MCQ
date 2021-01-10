@@ -1,0 +1,18 @@
+.question-card {
+    max-width: 1200px;
+    padding-left: 250px;
+  }
+
+  .ques{
+    background-color: mediumslateblue;
+  }
+  .correct{
+    color: green;
+    text-decoration-color: green;
+  }
+
+  .INCORRECT{
+    color: red;
+    text-decoration-color: red;
+  }
+ 
